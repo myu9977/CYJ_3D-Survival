@@ -9,6 +9,15 @@ public class PlayerController : MonoBehaviour
     public float moveSpeed;
     private Vector2 curMovementInput;
 
+    [Header(" Look ")]
+    public Transform cameraContainer;
+    public float minXLook;
+    public float maxXLook;
+    private float camCurXRop;
+    public float lookSensitivity;
+    private Vector2 mouseDelta;
+    //public bool canLook = true;
+
     private Rigidbody rigidbody;
 
     private void Awake()
@@ -27,6 +36,11 @@ public class PlayerController : MonoBehaviour
         Move();
     }
 
+    private void LateUpdate()
+    {
+        CameraLook();
+    }
+
     private void Move()
     {
         Vector3 dir = transform.forward * curMovementInput.y + transform.right * curMovementInput.x;
@@ -34,6 +48,15 @@ public class PlayerController : MonoBehaviour
         dir.y = rigidbody.velocity.y;
 
         rigidbody.velocity = dir;
+    }
+
+    private void CameraLook()
+    {
+        camCurXRop += mouseDelta.y * lookSensitivity;
+        camCurXRop = Mathf.Clamp(camCurXRop, minXLook, maxXLook);
+        cameraContainer.localEulerAngles = new Vector3(-camCurXRop, 0, 0);
+
+        transform.eulerAngles += new Vector3(0, mouseDelta.x * lookSensitivity, 0);
     }
 
     public void OnMove(InputAction.CallbackContext context)
@@ -46,5 +69,10 @@ public class PlayerController : MonoBehaviour
         {
             curMovementInput = Vector2.zero;
         }
+    }
+
+    public void OnLook(InputAction.CallbackContext context)
+    {
+        mouseDelta = context.ReadValue<Vector2>();
     }
 }
