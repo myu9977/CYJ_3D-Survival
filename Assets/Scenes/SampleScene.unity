@@ -10099,6 +10099,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 192166f2270bca849a47e52e498406c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  slots: []
+  inventoryWindow: {fileID: 979556952}
+  slotPanel: {fileID: 814277670}
+  selectedItemName: {fileID: 1405951510}
+  selectedItemDescription: {fileID: 44560686}
+  selectedItemStatName: {fileID: 2068565323}
+  selectedItemStatValue: {fileID: 621568358}
+  useButton: {fileID: 564008120}
+  equipButton: {fileID: 1481689389}
+  unEquipButton: {fileID: 1277590634}
+  dropButton: {fileID: 1477360563}
 --- !u!1001 &981157750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22496,7 +22507,19 @@ MonoBehaviour:
     m_ActionId: e769ee3c-9a33-4446-b4fe-acffadf7fe92
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 5072134269514851056}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInventoryButton
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: b16f0199-4d22-4e69-873d-5d7c439a3778
     m_ActionName: Player/Inventory[/Keyboard/tab]
   - m_PersistentCalls:
@@ -22561,6 +22584,7 @@ MonoBehaviour:
   minXLook: -85
   maxXLook: 85
   lookSensitivity: 0.1
+  canLook: 1
 --- !u!1 &5072134269514851057
 GameObject:
   m_ObjectHideFlags: 0

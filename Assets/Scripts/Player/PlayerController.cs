@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,8 +19,9 @@ public class PlayerController : MonoBehaviour
     private float camCurXRop;
     public float lookSensitivity;
     private Vector2 mouseDelta;
-    //public bool canLook = true;
+    public bool canLook = true;
 
+    public Action inventory;
     private Rigidbody rigidbody;
 
     private void Awake()
@@ -40,7 +42,10 @@ public class PlayerController : MonoBehaviour
 
     private void LateUpdate()
     {
-        CameraLook();
+        if (canLook)
+        {
+            CameraLook();
+        }
     }
 
     private void Move()
@@ -105,6 +110,22 @@ public class PlayerController : MonoBehaviour
         }
 
         return false; // 모든 레이가 바닥과 충돌하지 않으면 false 반환
+    }
+
+    public void OnInventoryButton(InputAction.CallbackContext callbackContext)
+    {
+        if (callbackContext.phase == InputActionPhase.Started)
+        {
+            inventory?.Invoke();
+            ToggleCursor();
+        }
+    }
+
+    void ToggleCursor()
+    {
+        bool toggle = Cursor.lockState == CursorLockMode.Locked;
+        Cursor.lockState = toggle ? CursorLockMode.None : CursorLockMode.Locked;
+        canLook = !toggle;
     }
 
 }
