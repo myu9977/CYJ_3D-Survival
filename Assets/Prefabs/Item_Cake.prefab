@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7449501058882200826}
   - component: {fileID: 5393765872937967411}
   - component: {fileID: 185614942317772114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item_Cake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 3195704130048045901}
   - component: {fileID: 5677001168530763087}
   - component: {fileID: 8079821590124517119}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Cake
   m_TagString: Untagged
   m_Icon: {fileID: 0}

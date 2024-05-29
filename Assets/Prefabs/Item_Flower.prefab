@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2999556024416920937}
   - component: {fileID: 7468199555468498640}
   - component: {fileID: 4819363535926202114}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item_Flower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 297871676975246639}
   - component: {fileID: 3674608118417175858}
   - component: {fileID: 8481525033113144984}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Flower1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

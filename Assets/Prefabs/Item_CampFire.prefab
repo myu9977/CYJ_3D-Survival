@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7256263873545560630}
   - component: {fileID: 5242372079525824971}
   - component: {fileID: 8336385940260628938}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Fire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4916,7 +4916,7 @@ GameObject:
   - component: {fileID: 9033460090553194631}
   - component: {fileID: 3702680456754564567}
   - component: {fileID: 7640879588266894630}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CampFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5001,7 +5001,7 @@ GameObject:
   - component: {fileID: 2677255167057381617}
   - component: {fileID: 2981925409650812708}
   - component: {fileID: 7883331539292629593}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Item_CampFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
