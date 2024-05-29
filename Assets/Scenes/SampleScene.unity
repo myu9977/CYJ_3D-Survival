@@ -6289,6 +6289,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6359112800851487366, guid: c0695e50372965840badd7b84ed57617, type: 3}
   m_PrefabInstance: {fileID: 585952291}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &606470713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606470714}
+  m_Layer: 6
+  m_Name: dropPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &606470714
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606470713}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1, y: 0.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5072134269514759817}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &615742390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10102,6 +10133,7 @@ MonoBehaviour:
   slots: []
   inventoryWindow: {fileID: 979556952}
   slotPanel: {fileID: 814277670}
+  dropPosition: {fileID: 0}
   selectedItemName: {fileID: 1405951510}
   selectedItemDescription: {fileID: 44560686}
   selectedItemStatName: {fileID: 2068565323}
@@ -20741,6 +20773,7 @@ Transform:
   - {fileID: 5072134269514759995}
   - {fileID: 5072134269514759893}
   - {fileID: 115331814}
+  - {fileID: 606470714}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &5072134269514759819
@@ -22616,6 +22649,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   condition: {fileID: 0}
   itemData: {fileID: 0}
+  dropPosition: {fileID: 606470714}
 --- !u!1 &5072134269514851059
 GameObject:
   m_ObjectHideFlags: 0
