@@ -23,10 +23,12 @@ public class PlayerController : MonoBehaviour
 
     public Action inventory;
     private Rigidbody rigidbody;
+    private Animator animator;
 
     private void Awake()
     {
         rigidbody = GetComponent<Rigidbody>();
+        animator = GetComponent<Animator>();
     }
 
     void Start()
@@ -55,6 +57,15 @@ public class PlayerController : MonoBehaviour
         dir.y = rigidbody.velocity.y;
 
         rigidbody.velocity = dir;
+
+        if (curMovementInput != Vector2.zero)
+        {
+            animator.SetBool("isRun", true);
+        }
+        else
+        {
+            animator.SetBool("isRun", false);
+        }
     }
 
     private void CameraLook()
