@@ -52,4 +52,5 @@ public class PlayerCondition : MonoBehaviour
         stamina.Subtract(amount);
         return true;
     }
+
 }

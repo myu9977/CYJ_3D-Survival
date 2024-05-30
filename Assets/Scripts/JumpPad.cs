@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JumpPad : MonoBehaviour
 {
-    public float jumpForce = 10f;
+    public float jumpForce = 100f;
 
     private void OnCollisionEnter(Collision collision)
     {
